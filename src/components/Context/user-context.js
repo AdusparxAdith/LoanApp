@@ -1,8 +1,8 @@
 import React, { createContext } from "react";
 
 const UserContext = createContext({
-  loanValue: "",
-  durationValue: "",
+  loanValue: 0,
+  durationValue: 0,
   updateloanValue: () => {},
   updatedurationValue: () => {}
 });
@@ -18,7 +18,7 @@ export class UserProvider extends React.Component {
   state = {
     loanValue: 500,
     updateloanValue: this.updateloanValue,
-    duration: 500,
+    durationValue: 6,
     updatedurationValue: this.updatedurationValue
   };
 

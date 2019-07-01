@@ -1,17 +1,18 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import Footer from "./Footer";
 import { UserConsumer } from "./Context/user-context";
 
 const Dashboard = () => {
-  const [sliderState, setSliderState] = useState(0);
   const getResult = sliderState => {
     console.log(sliderState);
   };
   return (
     <UserConsumer>
-      {({ loanValue }) => (
+      {({ loanValue, durationValue }) => (
         <Fragment>
-          <div className="dashBoard">{loanValue}</div>
+          <div className="dashBoard">
+            {loanValue} ,{durationValue}
+          </div>
           <Footer getResult={getResult} />
         </Fragment>
       )}
