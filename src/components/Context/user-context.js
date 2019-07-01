@@ -1,25 +1,38 @@
 import React, { createContext } from "react";
+import axios from "axios";
 
 const UserContext = createContext({
   loanValue: 0,
   durationValue: 0,
-  updateloanValue: () => {},
-  updatedurationValue: () => {}
+  result: null,
+  updateLoanValue: () => {},
+  updateDurationValue: () => {}
 });
 
 export class UserProvider extends React.Component {
-  updateloanValue = newloanValue => {
+  updateLoanValue = newloanValue => {
     this.setState({ loanValue: newloanValue });
+    this.makeApiCall(this.state.durationValue, newloanValue);
   };
-  updatedurationValue = newdurationValue => {
+  updateDurationValue = newdurationValue => {
     this.setState({ durationValue: newdurationValue });
+    this.makeApiCall(newdurationValue, this.state.loanValue);
+  };
+
+  makeApiCall = async (durationParam, loanParam) => {
+    let res = await axios.get(
+      `https://ftl-frontend-test.herokuapp.com/interest?amount=${loanParam}&numMonths=${durationParam}`
+    );
+    console.log(res.data);
+    this.setState({ result: res.data });
   };
 
   state = {
     loanValue: 500,
-    updateloanValue: this.updateloanValue,
+    updateLoanValue: this.updateLoanValue,
     durationValue: 6,
-    updatedurationValue: this.updatedurationValue
+    result: {},
+    updateDurationValue: this.updateDurationValue
   };
 
   render() {

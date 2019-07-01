@@ -13,19 +13,19 @@ const Footer = () => {
   };
   return (
     <UserConsumer>
-      {({ loanValue, updateloanValue, durationValue, updatedurationValue }) => (
+      {({ loanValue, updateLoanValue, durationValue, updateDurationValue }) => (
         <div className="footerBoard">
           <p>How much do you want to loan?</p>
           <Slider
             range={amountSliderRange}
             value={loanValue}
-            updateValue={updateloanValue}
+            updateValue={updateLoanValue}
           />
           <p>How long will you need?</p>
           <Slider
             range={durationSliderRange}
             value={durationValue}
-            updateValue={updatedurationValue}
+            updateValue={updateDurationValue}
           />
         </div>
       )}

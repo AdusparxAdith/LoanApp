@@ -8,10 +8,18 @@ const Dashboard = () => {
   };
   return (
     <UserConsumer>
-      {({ loanValue, durationValue }) => (
+      {({ result: { interestRate, monthlyPayment, numPayments } }) => (
         <Fragment>
           <div className="dashBoard">
-            {loanValue} ,{durationValue}
+            {monthlyPayment ? (
+              <p>
+                You have to pay {monthlyPayment ? monthlyPayment.amount : null}{" "}
+                per month for {numPayments} months, at an interest rate of{" "}
+                {interestRate}
+              </p>
+            ) : (
+              <p>Welcome! </p>
+            )}
           </div>
           <Footer getResult={getResult} />
         </Fragment>

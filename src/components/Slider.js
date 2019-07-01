@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
   const handleChange = (updateValue, event) => {
     updateValue(parseInt(event.target.value));
+    console.log(event.target.value);
   };
 
   return (
