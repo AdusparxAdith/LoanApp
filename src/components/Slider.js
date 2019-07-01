@@ -9,7 +9,7 @@ const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
 
   return (
     <Fragment>
-      <Fragment>
+      <div className="inputSection">
         <input
           type="range"
           min={minValue}
@@ -19,8 +19,8 @@ const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
           id="myRange"
           onChange={event => handleChange(updateValue, event)}
         />
-      </Fragment>
-      <p>{value}</p>
+        <p> {value}</p>
+      </div>
     </Fragment>
   );
 };
