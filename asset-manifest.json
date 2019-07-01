@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/repository-name/static/css/main.478e01f5.chunk.css",
-    "main.js": "/repository-name/static/js/main.24a8445d.chunk.js",
-    "main.js.map": "/repository-name/static/js/main.24a8445d.chunk.js.map",
-    "runtime~main.js": "/repository-name/static/js/runtime~main.f7634681.js",
-    "runtime~main.js.map": "/repository-name/static/js/runtime~main.f7634681.js.map",
-    "static/js/2.6e87735a.chunk.js": "/repository-name/static/js/2.6e87735a.chunk.js",
-    "static/js/2.6e87735a.chunk.js.map": "/repository-name/static/js/2.6e87735a.chunk.js.map",
-    "index.html": "/repository-name/index.html",
-    "precache-manifest.b144824453b471bed0415eacb671be74.js": "/repository-name/precache-manifest.b144824453b471bed0415eacb671be74.js",
-    "service-worker.js": "/repository-name/service-worker.js",
-    "static/css/main.478e01f5.chunk.css.map": "/repository-name/static/css/main.478e01f5.chunk.css.map"
+    "main.css": "/LoanApp/static/css/main.478e01f5.chunk.css",
+    "main.js": "/LoanApp/static/js/main.24a8445d.chunk.js",
+    "main.js.map": "/LoanApp/static/js/main.24a8445d.chunk.js.map",
+    "runtime~main.js": "/LoanApp/static/js/runtime~main.5aa33d6e.js",
+    "runtime~main.js.map": "/LoanApp/static/js/runtime~main.5aa33d6e.js.map",
+    "static/js/2.6e87735a.chunk.js": "/LoanApp/static/js/2.6e87735a.chunk.js",
+    "static/js/2.6e87735a.chunk.js.map": "/LoanApp/static/js/2.6e87735a.chunk.js.map",
+    "index.html": "/LoanApp/index.html",
+    "precache-manifest.5b6c6994bc129f64f3e5983d2db0e372.js": "/LoanApp/precache-manifest.5b6c6994bc129f64f3e5983d2db0e372.js",
+    "service-worker.js": "/LoanApp/service-worker.js",
+    "static/css/main.478e01f5.chunk.css.map": "/LoanApp/static/css/main.478e01f5.chunk.css.map"
   }
 }
