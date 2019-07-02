@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "../Slider";
 import { UserConsumer } from "../Context/user-context";
 
-const Footer = () => {
+const Footer = ({ convert }) => {
   const amountSliderRange = {
     minValue: 500,
     maxValue: 5000

@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
   const handleChange = (updateValue, event) => {
     updateValue(parseInt(event.target.value));
-    console.log(event.target.value);
   };
 
   return (
@@ -27,7 +26,8 @@ const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
 
 Slider.propTypes = {
   range: PropTypes.object.isRequired,
-  value: PropTypes.number.isRequired
+  value: PropTypes.number.isRequired,
+  updateValue: PropTypes.func.isRequired
 };
 
 export default Slider;

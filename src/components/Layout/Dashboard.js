@@ -32,7 +32,7 @@ const Dashboard = () => {
             )}
           </div>
 
-          <Footer />
+          <Footer convert={convert} />
         </Fragment>
       )}
     </UserConsumer>
