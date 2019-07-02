@@ -3,9 +3,17 @@ import Footer from "../Layout/Footer";
 import { UserConsumer } from "../Context/user-context";
 
 const Dashboard = () => {
-  const convert = amount => {
-    return `USD ${amount} `;
+  const getTimeofDay = time => {
+    let hours = time.getHours();
+    let timeOfDay =
+      hours > 16
+        ? "Good Evening"
+        : hours > 12
+        ? "Good Afternoon"
+        : "Good Morning";
+    return timeOfDay;
   };
+
   return (
     <UserConsumer>
       {({ result: { interestRate, monthlyPayment, numPayments } }) => (
@@ -18,21 +26,21 @@ const Dashboard = () => {
                 <span
                   className={`highlight ${interestRate > 0.4 ? "loss" : ""}`}
                 >
-                  {monthlyPayment ? convert(monthlyPayment.amount) : null}
+                  ${monthlyPayment ? monthlyPayment.amount : null}
                 </span>{" "}
                 per month for {numPayments} months, at an interest rate of{" "}
                 {interestRate}
               </p>
             ) : (
               <p className="focusContent">
-                Welcome!
+                {getTimeofDay(new Date())}!
                 <br />
                 <span className="highlight"> Slide to begin</span>{" "}
               </p>
             )}
           </div>
 
-          <Footer convert={convert} />
+          <Footer />
         </Fragment>
       )}
     </UserConsumer>

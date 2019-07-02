@@ -2,23 +2,33 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
-  const handleChange = (updateValue, event) => {
+  let valuee = value;
+  if (isNaN(valuee)) valuee = 0;
+  const handleChange = event => {
     updateValue(parseInt(event.target.value));
   };
 
   return (
     <Fragment>
       <div className="inputSection">
+        <div className="indicators">
+          <div>{minValue}</div>
+          <div>{maxValue}</div>
+        </div>
         <input
           type="range"
           min={minValue}
           max={maxValue}
-          value={value}
+          value={valuee}
           className="slider"
           id="myRange"
-          onChange={event => handleChange(updateValue, event)}
+          onChange={event => handleChange(event)}
         />
-        <p> {value}</p>
+        <input
+          className="inputBox"
+          value={valuee}
+          onChange={event => handleChange(event)}
+        />
       </div>
     </Fragment>
   );

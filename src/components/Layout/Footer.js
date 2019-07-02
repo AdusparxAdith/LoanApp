@@ -16,13 +16,13 @@ const Footer = ({ convert }) => {
       {({ loanValue, updateLoanValue, durationValue, updateDurationValue }) => (
         <div className="footerBoard">
           <div className="footerSection">
-            <p>How much do you want to loan?</p>
+            <p>How much do you want to borrow?</p>
             <Slider
               range={amountSliderRange}
               value={loanValue}
               updateValue={updateLoanValue}
             />
-            <p>How long will you need?</p>
+            <p>For what duration?</p>
             <Slider
               range={durationSliderRange}
               value={durationValue}

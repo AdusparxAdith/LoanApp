@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 /* GLOBAL VARIABLES */
 :root {
@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Alegreya Sans SC", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 100%;
   vertical-align: baseline;
   box-sizing: border-box;
@@ -44,6 +44,7 @@
 
 .highlight {
   color: #00b894;
+  font-size: 1.6rem;
 }
 
 .loss {
@@ -121,6 +122,25 @@
   margin-bottom: 10px;
 }
 
+.inputBox {
+  width: 15vw;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0px;
+  background: #04b894;
+  outline: none;
+  color: white;
+}
+
+.indicators {
+  display: flex;
+  width: 90vw;
+  font-size: 0.9rem;
+  color: white;
+  position: absolute;
+  justify-content: space-between;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (min-width: 1200px) {
   * {
@@ -128,5 +148,8 @@
   }
   .footerBoard {
     border-radius: 0%;
+  }
+  .indicators {
+    padding: 0 7rem;
   }
 }

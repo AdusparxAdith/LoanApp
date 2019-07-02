@@ -23,7 +23,7 @@ export class UserProvider extends React.Component {
     let res = await axios.get(
       `https://ftl-frontend-test.herokuapp.com/interest?amount=${loanParam}&numMonths=${durationParam}`
     );
-    console.log(res.data);
+
     this.setState({ result: res.data });
   };
 
