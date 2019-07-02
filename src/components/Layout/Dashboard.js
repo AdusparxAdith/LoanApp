@@ -3,6 +3,7 @@ import Footer from "../Layout/Footer";
 import { UserConsumer } from "../Context/user-context";
 
 const Dashboard = () => {
+  //Greeting function
   const getTimeofDay = time => {
     let hours = time.getHours();
     let timeOfDay =
@@ -15,6 +16,10 @@ const Dashboard = () => {
   };
 
   return (
+    /* Accessing global state as a consumer for obtaining results
+     @param  {[number]} interestRate [value of obtained interest rate] 
+     @param  {[number]} monthlyPayment [value of obtained monthly payment] 
+     @param  {[number]} numPayments [value of obtained number of payments] */
     <UserConsumer>
       {({ result: { interestRate, monthlyPayment, numPayments } }) => (
         <Fragment>

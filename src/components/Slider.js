@@ -2,8 +2,12 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
-  let valuee = value;
-  if (isNaN(valuee)) valuee = 0;
+  let realValue = value;
+  //To handle null
+  if (isNaN(realValue)) realValue = 0;
+
+  /* Update state on change of input
+   @param  {[event]} event [change in input] */
   const handleChange = event => {
     updateValue(parseInt(event.target.value));
   };
@@ -19,14 +23,14 @@ const Slider = ({ range: { minValue, maxValue }, value, updateValue }) => {
           type="range"
           min={minValue}
           max={maxValue}
-          value={valuee}
+          value={realValue}
           className="slider"
           id="myRange"
           onChange={event => handleChange(event)}
         />
         <input
           className="inputBox"
-          value={valuee}
+          value={realValue}
           onChange={event => handleChange(event)}
         />
       </div>
